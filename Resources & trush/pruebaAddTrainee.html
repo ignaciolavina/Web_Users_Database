@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Añadir Alumno</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        h1{
+          margin-left: 2%;
+        }
+        div.container {
+          border-radius: 5px;
+          background-color: #ECF4FB; /*#E7F3F8 /*#f2f2f2; /*#D8F1FA*/
+        }
+        div.tabla1 {
+          margin-left: 2%;
+          margin-top: 1%;
+          margin-right: 2%;
+        }
+
+        input[type=submit] {
+          width: 30%;
+          color: white;
+          padding: 14px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          margin:auto;
+          display:block;
+        }
+        div.form{
+          padding: 1.5em;
+        }
+        .form-group {
+          margin-bottom: 15px;
+          margin-left: 15p;
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!--Tipo de navbar de bootstrap. Fixed top para que este fijo mientras hagamos scroll down-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="position: relative;"> 
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!--Botón que se muestra al reducir las dimensiones-->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="#">WebSiteName</a>
+            </div>
+            <!--Contenido de la navbar, ya sea con o sin boton-->
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Dashboard</a></li>
+                    <!--
+                    En caso de que usemos varias opciones en una sola.
+                    Por ejemplo, si una opcion es "Escuela", que tenga opciones como los alumnos, las clases,etc
+                    -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Escuela <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Alumnos</a></li>
+                            <li><a href="#">Clases</a></li>
+                            <li><a href="#">Etc</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Ranking</a></li>
+                    <li><a href="#">Tienda</a></li>
+                    <li><a href="#">Estadísticas</a></li>
+                    <li><a href="#">Configuración</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div>
+      <h1>Añadir alumno</h1>
+    </div>
+    <div class="form"> <!--Mas menos para que se vea como es el formulario, faltan campos-->
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">First Name</label>
+            <input type="text" class="form-control" placeholder="First name">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Surname</label>
+            <input type="text" class="form-control" placeholder="Last name">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Password</label>
+            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Address 2</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">State</label>
+            <select id="inputState" class="form-control">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox"> Check me out
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Añadir</button>
+      </form>
+    </div>
+</body>
+</html>

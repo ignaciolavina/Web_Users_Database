@@ -1,0 +1,127 @@
+<!--Probando bootstrap-->
+<!--Tenemos un navegador donde se crea un boton al reducirse la dimensión total de al pagina con todas las opciones-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Nuevo usuario</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        div.container {
+
+            border-radius: 5px;
+            background-color: #ECF4FB; /*#E7F3F8 /*#f2f2f2; /*#D8F1FA*/
+        }
+
+        input[type=submit] {
+            width: 30%;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin:auto;
+            display:block
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!--Tipo de navbar de bootstrap. Fixed top para que este fijo mientras hagamos scroll down-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="position: relative;"> 
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!--Botón que se muestra al reducir las dimensiones-->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="#">WebSiteName</a>
+            </div>
+            <!--Contenido de la navbar, ya sea con o sin boton-->
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Dashboard</a></li>
+                    <!--
+                    En caso de que usemos varias opciones en una sola.
+                    Por ejemplo, si una opcion es "Escuela", que tenga opciones como los alumnos, las clases,etc
+                    -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Escuela <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Alumnos</a></li>
+                            <li><a href="#">Clases</a></li>
+                            <li><a href="#">Etc</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Ranking</a></li>
+                    <li><a href="#">Tienda</a></li>
+                    <li><a href="#">Estadísticas</a></li>
+                    <li><a href="#">Configuración</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  
+    <div class="container">
+        <br>
+            <h1>Nuevo Usuario</h1>
+                <div>
+                    <!--FORMULARIO-->
+                    <form class="form-horizontal" autocomplete="on">
+                        <div class="form-group">
+                            <label for="complete_name">Nombre Completo</label>
+                            <input type="text" class="form-control" id="complete_name" aria-describedby="NameHelp" placeholder="Nombre completo">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" class="form-control" id="phone" aria-describedby="phoneHelp" placeholder="Número de telefono">
+                        </div>
+                        <!-- Noot needed 
+                        <div class="form-group">
+                            <label for="address">Dirección</label>
+                            <input type="text" class="form-control" id="address" aria-describedby="adressHelp" placeholder="Domicilio">
+                        </div> -->
+                        <div class="form-group">
+                            <label for="gender">Género:     </label>
+                                <input type="radio" name="gender" value="male" checked> Masculino
+                                <input type="radio" name="gender" value="female"> Femenino
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Notas</label>
+                            <input type="notes" class="form-control" id="notes" aria-describedby="notesHelp" placeholder="Notas">
+                        </div>
+                        <div>
+                            NOTAS<br>
+                            A falta de concretar si incluir:<br>
+                            Dirección (Para qué?)
+                            <br>
+                            Notas: el género no está como lo demás, revisar<br>
+                            Notas 2:
+                            Falta age<br>
+
+                            Notas 3: mote
+                            <br>(//Coment: El Mote es el que aparecerá en el cuadrante al alquilar, debe ser breve y conciso, que se ponga x defecto la primera palabra introducida justo arriba + .la primera letra del apellido)
+                        </div>          
+                    </form>
+                </div>
+
+                <br>
+                <input type="submit" class="btn btn-primary" value="submit"/>
+                <br><br>
+
+
+    </div>
+</body>
+</html>
